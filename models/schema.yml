@@ -69,7 +69,29 @@ sources:
             column_name : "(date_date || '-' || campaign_key)"
         - not_null:
             column_name : "(date_date || '-' || campaign_key)"
-    - name : campaign_days
-    identifier : int_campaigns_day
+models :
+    - name : int_campaigns_day
+      columns: 
+        - name: date_date
+          tests:
+            - unique
+            - not_null 
+    - name : finance_campaigns_day
+      columns: 
+        - name: date_date
+          tests: 
+            - unique
+            - not_null
+    - name : finance_days
+      columns: 
+        - name: date_date
+          tests:
+            - unique
+            - not_null
+            
+    
+            
+            
+
 
 
